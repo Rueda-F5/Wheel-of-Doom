@@ -1,18 +1,41 @@
-  
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 </head>
-<body>
-  <h1>Wheel-of-doom<h1
-<p>Random roulette that keeps it's memory<p>
-<div class="roulette" style="display:none;"> 
-	<img src="http://example.com/star.png"/>
-	<img src="http://example.com/flower.png"/>
-	<img src="http://example.com/coin.png"/>
-	<img src="http://example.com/mshroom.png"/>
-	<img src="http://example.com/chomp.png"/>
-</div> 
+
+<body style = "text-align:center;">  
+      
+    <h1 style = "color:green;">  
+        Wheel of Dooms  
+    </h1>  
+      
+    <p id = "WoD_UP" style =  
+        "font-size: 15px; font-weight: bold;">  
+    </p> 
+      
+    <button id = "button" onclick = "WoD_Fun()">  
+        click here  
+    </button>  
+      
+    <p id = "WoD_DOWN" style =  
+        "font-size: 24px; font-weight: bold; color: green;">  
+    </p>  
+      
+    <script>  
+        var up = document.getElementById('WoD_UP');  
+        var down = document.getElementById('WoD_DOWN');  
+          
+        var equipo = ["Elena", "Diana", "Santiago", "Maely", "Magda", "Juana", "Víctor", "Hanna", "Yesid", "Belén", "Ernesto", "Yoana", "Yeison", "Karen", "Marylin", "Daniel", "Lali", "María", "Jaime", "Gema", "Eric", "Aliona", "Esther", "Rodrigo"];
+          
+        up.innerHTML = "Click on the button to check " 
+               + "the type of element.<br><br>" + equipo; 
+          
+        function WoD_Fun() { 
+            down.innerHTML =  
+                equipo[Math.floor(Math.random() * equipo.length)]; 
+        }  
+    </script>  
+
 </body>
 </html>
