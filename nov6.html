@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body style = "text-align:center;">  
+      
+    <h1 style = "color:green;">  
+        Wheel of Dooms  
+    </h1>  
+    
+    <div>  
+      <p id = "WoD_UP" style = "font-size: 15px; font-weight: bold;"></p> 
+      <button id = "button" onclick = "WoD_Fun()">  click here  </button>  
+      <p id = "WoD_DOWN" style = "font-size: 24px; font-weight: bold; color: green;"></p>
+    </div>
+
+    <div>
+      <button id = "button" onclick = " muertitos()"> sacrificar </button> 
+      <p id = "pequipo" style =  "font-size: 10px; font-weight: bold; color: green;"></p>
+      <br>
+      <p id = "pmuertos" style =  "font-size: 24px; font-weight: bold; color: green;"></p>
+    </div>
+      
+    <script>  
+        var up = document.getElementById('WoD_UP');  
+        var down = document.getElementById('WoD_DOWN');
+        var pequipo = document.getElementById('pequipo');
+        var pmuertos =  document.getElementById('pmuertos');
+
+        var equipo = ["Elena", "Diana", "Santiago", "Maely", "Magda", "Juana", "Víctor", "Hanna", "Yesid", "Belén", "Ernesto", "Yoana", "Yeison", "Karen", "Marylin", "Daniel", "Lali", "María", "Jaime", "Gema", "Eric", "Aliona", "Esther", "Rodrigo"];
+          
+        up.innerHTML = "Click on the button to check " 
+               + "the type of element.<br><br>" + equipo; 
+          
+        function WoD_Fun() { 
+            down.innerHTML =  
+                equipo[Math.floor(Math.random() * equipo.length)]; 
+               // var muerto = equipo[Math.floor(Math.random() * equipo.length)]; 
+                //document.write(muerto);
+                //return muerto;
+        }  
+        var muerto =WoD_Fun() 
+        function muertitos(muerto){
+            document.write(WoD_Fun()); 
+            pmuertos.innerHTML = "los muertos son" + equipo.splice(muerto,1);
+        }
+
+
+        pequipo.innerHTML = "los vivos son" + equipo;
+
+       
+
+      
+    </script>  
+
+</body>
+</html>
