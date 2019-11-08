@@ -3,34 +3,42 @@
 <head>
 	<title></title>
 </head>
-<body>
 
-  <script type="text/javascript">
-  	
-  var option = {
-	speed : 5,
-	duration : 3,
-	stopImageNumber : -1,
-	startCallback : function() {
-		console.log('start');
-	},
-	slowDownCallback : function() {
-		console.log('slowDown');
-	},
-	stopCallback : function($stopElm) {
-		console.log('stop');
-	}
-}
-$('div.roulette').roulette(option);		
-  </script>
+<body style = "text-align:center;">  
+      
+    <h1 style = "color:green;">  
+        Wheel of Dooms  
+    </h1>  
+      
+    <p id = "WoD_UP" style =  
+        "font-size: 15px; font-weight: bold;">  
+    </p> 
+      
+    <button id = "button" onclick = "WoD_Fun()">  
+        click here  
+    </button>  
+      
+    <p id = "WoD_DOWN" style =  
+        "font-size: 24px; font-weight: bold; color: green;">  
+    </p>  
+      
+    <script>  
+        var up = document.getElementById('WoD_UP');  
+        var down = document.getElementById('WoD_DOWN');  
+          
+        var equipo = ["Elena", "Diana", "Santiago", "Maelly", "Magdalena", "Juana", "Víctor", "Hanan", "Yesid", "Belén", "Ernesto", "Yoana", "Yeison", "Karen", "Marilyn", "Daniel", "Lali", "María", "Jaime", "Gema", "Erick", "Aliona", "Esther", "Rodrigo"];
+          
+        up.innerHTML = "Click on the button to check " 
+               + "the type of element.<br><br>" + equipo; 
 
-	<div class="roulette" style="display:none;"> 
-	<img src="https://lh6.googleusercontent.com/xh7GRW1Syt8VdWdhwWnKgD835DtuWH8UPNzJE9LVqyLmqdoeVWTfU90R6EOV845UM7QT2uekc2At1OkOk_NQAac0uiL3yixTGqvWlvDU0FZHXmVkEbg=w371"/>
-	<img src="http://example.com/flower.png"/>
-	<img src="http://example.com/coin.png"/>
-	<img src="http://example.com/mshroom.png"/>
-	<img src="http://example.com/chomp.png"/>
-</div> 
+
+        function WoD_Fun() {
+            down.innerHTML =  
+                equipo[Math.floor(Math.random() * equipo.length)]; 
+                var muerto = equipo[Math.floor(Math.random() * equipo.length)];
+                       
+        }        
+     </script>  
 
 </body>
 </html>
