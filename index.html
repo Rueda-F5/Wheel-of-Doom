@@ -30,8 +30,6 @@
         "font-size: 12px; font-weight: bold; color: red;">  
     </p> 
 
-
-      
     <script>  
         var up = document.getElementById('WoD_UP');  
         var down = document.getElementById('WoD_DOWN');
@@ -41,10 +39,6 @@
         sacrificios = [];
 
         
-          
-        
-        
-          
         
         function WoD_Fun() {
            
@@ -57,7 +51,10 @@
             equipo.splice(muerto, 1);
             pvivos.innerHTML = equipo;
 
-
+            if (equipo.length == 0){
+                alert ("Están todos bien muertos");
+                document.getElementById('button').disabled = true;
+            }
 
         }        
      </script>  
