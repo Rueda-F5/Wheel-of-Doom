@@ -26,17 +26,22 @@
         var up = document.getElementById('WoD_UP');  
         var down = document.getElementById('WoD_DOWN');  
           
-        var equipo = ["Elena", "Diana", "Santiago", "Maelly", "Magdalena", "Juana", "Víctor", "Hanan", "Yesid", "Belén", "Ernesto", "Yoana", "Yeison", "Karen", "Marilyn", "Daniel", "Lali", "María", "Jaime", "Gema", "Erick", "Aliona", "Esther", "Rodrigo"];
+        
+        
           
-        up.innerHTML = "Click on the button to check " 
-               + "the type of element.<br><br>" + equipo; 
+        
 
 
         function WoD_Fun() {
-            down.innerHTML =  
-                equipo[Math.floor(Math.random() * equipo.length)]; 
-                var muerto = equipo[Math.floor(Math.random() * equipo.length)];
-                       
+            var equipo = ["Elena", "Diana", "Santiago", "Maelly", "Magdalena", "Juana", "Víctor", "Hanan", "Yesid", "Belén", "Ernesto", "Yoana", "Yeison", "Karen", "Marilyn", "Daniel", "Lali", "María", "Jaime", "Gema", "Erick", "Aliona", "Esther", "Rodrigo"];
+            up.innerHTML = "Click on the button to check" + "the type of element.<br><br>" + equipo; 
+
+            var muerto = Math.floor(Math.random() * equipo.length);
+            down.innerHTML = muerto; 
+            alert(equipo[muerto]+"  "+muerto); 
+            equipo.splice(muerto, 1);
+                  
+            document.write(equipo);
         }        
      </script>  
 
