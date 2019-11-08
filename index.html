@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+    <title></title>
 </head>
 
 <body style = "text-align:center;">  
@@ -21,27 +21,44 @@
     <p id = "WoD_DOWN" style =  
         "font-size: 24px; font-weight: bold; color: green;">  
     </p>  
+
+     <p id = "pVivos" style =  
+        "font-size: 12px; font-weight: bold; color: red;">  
+    </p> 
+
+    <p id = "pMuertos" style =  
+        "font-size: 12px; font-weight: bold; color: red;">  
+    </p> 
+
+
       
     <script>  
         var up = document.getElementById('WoD_UP');  
-        var down = document.getElementById('WoD_DOWN');  
+        var down = document.getElementById('WoD_DOWN');
+        var pvivos = document.getElementById('pVivos');
+        var pmuertos = document.getElementById('pMuertos');
+        equipo = ["Elena", "Diana", "Santiago", "Maelly", "Magdalena", "Juana", "Víctor", "Hanan", "Yesid", "Belén", "Ernesto", "Yoana", "Yeison", "Karen", "Marilyn", "Daniel", "Lali", "María", "Jaime", "Gema", "Erick", "Aliona", "Esther", "Rodrigo"];
+        sacrificios = [];
+
+        
           
         
         
           
         
-
-
         function WoD_Fun() {
-            var equipo = ["Elena", "Diana", "Santiago", "Maelly", "Magdalena", "Juana", "Víctor", "Hanan", "Yesid", "Belén", "Ernesto", "Yoana", "Yeison", "Karen", "Marilyn", "Daniel", "Lali", "María", "Jaime", "Gema", "Erick", "Aliona", "Esther", "Rodrigo"];
+           
             up.innerHTML = "Click on the button to check" + "the type of element.<br><br>" + equipo; 
-
             var muerto = Math.floor(Math.random() * equipo.length);
             down.innerHTML = muerto; 
             alert(equipo[muerto]+"  "+muerto); 
+            sacrificios.push(equipo[muerto]);
+            pmuertos.innerHTML = sacrificios;
             equipo.splice(muerto, 1);
-                  
-            document.write(equipo);
+            pvivos.innerHTML = equipo;
+
+
+
         }        
      </script>  
 
