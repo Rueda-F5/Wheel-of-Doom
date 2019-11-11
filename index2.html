@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+<body style = "text-align:center;" onload="caronte()">  
+      
+    <h1 style = "color:green;">  
+        Wheel of Dooms  
+    </h1>  
+      
+    <p id = "WoD_UP" style =  
+        "font-size: 15px; font-weight: bold;">  
+    </p> 
+      
+    <button id = "button" onclick = "WoD_Fun()">  
+        click here  
+    </button>  
+      
+    <p id = "WoD_DOWN" style =  
+        "font-size: 24px; font-weight: bold; color: green;">  
+    </p>  
+
+     <p id = "pVivos" style =  
+        "font-size: 12px; font-weight: bold; color: red;">  
+    </p> 
+
+    <p id = "pMuertos" style =  
+        "font-size: 12px; font-weight: bold; color: red;">  
+    </p> 
+
+    <br>
+        <button id="Ataud" onclick="forense()">ataud</button>
+    <br>
+        <button id="reset" onclick="freset()">Reset</button>
+
+    <script>  
+        var up = document.getElementById('WoD_UP');  
+        var down = document.getElementById('WoD_DOWN');
+        var pvivos = document.getElementById('pVivos');
+        var pmuertos = document.getElementById('pMuertos');
+        equipo = ["Elena", "Diana", "Santiago", "Maelly", "Magdalena", "Juana", "Víctor", "Hanan", "Yesid", "Belén", "Ernesto", "Yoana", "Yeison", "Karen", "Marilyn", "Daniel", "Lali", "María", "Jaime", "Gema", "Erick", "Aliona", "Esther", "Rodrigo"];
+        sacrificios = [];
+        var ataud = localStorage.length; 
+        var breset = document.getElementById('reset'); 
+
+
+        
+        
+        function WoD_Fun() {
+           
+            up.innerHTML = "Click on the button to check" + "the type of element.<br><br>" + equipo; 
+            var muerto = Math.floor(Math.random() * equipo.length);
+            down.innerHTML = muerto; 
+            alert(equipo[muerto]+"  "+muerto); 
+            sacrificios.push(equipo[muerto]);
+            pmuertos.innerHTML = sacrificios;
+            equipo.splice(muerto, 1);
+            pvivos.innerHTML = equipo;
+            ataud++;
+            localStorage.setItem(ataud,muerto);
+
+            if (equipo.length == 0){
+                alert ("Están todos bien muertos");
+                document.getElementById('button').disabled = true;
+            }
+
+        }    
+
+        var bataud = document.getElementById('Ataud');
+
+     function forense() {
+        alert(localStorage.getItem(parseInt(prompt("Qué ataud desea?"))));
+     }
+
+      function freset() {
+        localStorage.clear();
+     }
+
+     function caronte(){
+        for (var i = 1; i <= localStorage.length; i++) {
+            sacrificios.push(localStorage.getItem(i));
+            }
+
+     }
+
+
+     </script>  
+
+</body>
+</html>
