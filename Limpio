@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WoD</title>
+</head>
+<body style = "text-align:center;">
+
+	<h1>Wheel of Doom</h1>
+	<div>
+		<h2>Vivos</h2>
+		<p>Los que eran: "Elena", "Diana", "Santiago", "Maelly", "Magdalena", "Juana", "Víctor", "Hanan", "Yesid", "Belén", "Ernesto", "Yoana", "Yeison", "Karen", "Marilyn", "Daniel", "Lali", "María", "Jaime", "Gema", "Erick", "Aliona", "Esther", "Rodrigo"</p>
+		<br>
+		<p id="pVivos"></p>
+		<br>
+		<button id="ruleta" onclick="fruleta()">Ruleta</button>
+		<h2>Muertos</h2>
+		<p id="pMuertos"></p>
+		<br>
+	</div>
+	<div>
+		<button id="Ataud" onclick="forense()">Sarcófago</button>
+		<br>
+		<button id="reset" onclick="freset()">Reset</button>
+	</div>
+
+
+	<script type="text/javascript">
+        var pvivos = document.getElementById('pVivos');
+        var pmuertos = document.getElementById('pMuertos');
+        equipo = ["Elena", "Diana", "Santiago", "Maelly", "Magdalena", "Juana", "Víctor", "Hanan", "Yesid", "Belén", "Ernesto", "Yoana", "Yeison", "Karen", "Marilyn", "Daniel", "Lali", "María", "Jaime", "Gema", "Erick", "Aliona", "Esther", "Rodrigo"];
+        sacrificios = [];
+        var ataud;
+        var sarcofago;  
+        var breset = document.getElementById('reset');
+        var bataud = document.getElementById('Ataud');
+
+
+        function fruleta() {
+
+            ataud = localStorage.getItem(sarcofago);
+            
+            if (ataud != null) {
+            sacrificios = ataud.split(',');
+            }
+            
+            do {
+                var muerto = Math.floor(Math.random() * equipo.length);
+                
+            } 
+              while (sacrificios.includes(muerto) == true)
+
+            sacrificios.push(equipo[muerto]);
+            alert(equipo[muerto]+"  "+muerto);
+            pmuertos.innerHTML = sacrificios;
+            localStorage.setItem(sarcofago,sacrificios.toString());
+            if (sacrificios.length == 24){
+                alert ("Están todos bien muertos");
+                document.getElementById('button').disabled = true;
+            }
+        }
+
+     function forense() {
+        alert(localStorage.getItem(sarcofago));
+     }
+
+      function freset() {
+        localStorage.clear();
+     }
+
+	</script>
+
+</body>
+</html>
