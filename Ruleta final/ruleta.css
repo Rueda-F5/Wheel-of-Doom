@@ -1,0 +1,238 @@
+
+.circle {
+
+    animation:gira 2s linear;
+    animation-iteration-count: inherit;
+    position: relative;
+    border: 1px solid black;
+    padding: 0;
+    margin: 1em auto;
+    width: 40em;
+    height:40em;
+    border-radius: 50%;
+    list-style: none;
+    overflow: hidden;
+ 
+}
+@keyframes gira{
+    from{
+        transform:rotate(60deg)
+    }
+    to{
+        animation-direction: alternate-reverse;
+        transform: rotate(180deg);
+    }
+}
+li {
+    overflow: hidden;
+    position: absolute;
+    top: 0; right: 0;
+    width: 50%; height: 50%;
+    transform-origin: 0% 100%;      
+}
+.text {
+    position: absolute;
+    left: -100%;
+    width: 200%; height: 200%;
+    text-align: center;
+    -webkit-transform: skewY(250deg) rotate(8deg);
+    -ms-transform: skewY(250deg) rotate(8deg);
+    transform: skewY(250deg) rotate(8deg);
+    padding-top: 80px;
+}
+
+li:first-child {
+    -webkit-transform: rotate(0deg) skewY(105deg);
+    -ms-transform: rotate(0deg) skewY(105deg);
+    transform: rotate(0deg) skewY(105deg);     
+}
+li:nth-child(2) {
+    -webkit-transform: rotate(15deg) skewY(105deg);
+    -ms-transform: rotate(15deg) skewY(105deg);
+    transform: rotate(15deg) skewY(105deg);     
+}
+li:nth-child(3) {
+    -webkit-transform: rotate(30deg) skewY(105deg);
+    -ms-transform: rotate(30deg) skewY(105deg);
+    transform: rotate(30deg) skewY(105deg);    
+}
+li:nth-child(4) {
+    -webkit-transform: rotate(45deg) skewY(105deg);
+    -ms-transform: rotate(45deg) skewY(105deg);
+    transform: rotate(45deg) skewY(105deg);    
+}
+li:nth-child(5) {
+    -webkit-transform: rotate(60deg) skewY(105deg);
+    -ms-transform: rotate(60deg) skewY(105deg);
+    transform: rotate(60deg) skewY(105deg);    
+}
+li:nth-child(6) {
+    -webkit-transform: rotate(75deg) skewY(105deg);
+    -ms-transform: rotate(75deg) skewY(105deg);
+    transform: rotate(75deg) skewY(105deg);    
+}
+li:nth-child(7) {
+    -webkit-transform: rotate(90deg) skewY(105deg);
+    -ms-transform: rotate(90deg) skewY(105deg);
+    transform: rotate(90deg) skewY(105deg);    
+}
+li:nth-child(8) {
+    -webkit-transform: rotate(105deg) skewY(105deg);
+    -ms-transform: rotate(105deg) skewY(105deg);
+    transform: rotate(105deg) skewY(105deg);    
+}
+li:nth-child(9) {
+    -webkit-transform: rotate(120deg) skewY(105deg);
+    -ms-transform: rotate(120deg) skewY(105deg);
+    transform: rotate(120deg) skewY(105deg);    
+}
+li:nth-child(10) {
+    -webkit-transform: rotate(135deg) skewY(105deg);
+    -ms-transform: rotate(135deg) skewY(105deg);
+    transform: rotate(135deg) skewY(105deg);    
+}
+li:nth-child(11) {
+    -webkit-transform: rotate(150deg) skewY(105deg);
+    -ms-transform: rotate(150deg) skewY(105deg);
+    transform: rotate(150deg) skewY(105deg);    
+}
+li:nth-child(12) {
+    -webkit-transform: rotate(165deg) skewY(105deg);
+    -ms-transform: rotate(165deg) skewY(105deg);
+    transform: rotate(165deg) skewY(105deg);    
+}
+li:nth-child(13) {
+    -webkit-transform: rotate(180deg) skewY(105deg);
+    -ms-transform: rotate(180deg) skewY(105deg);
+    transform: rotate(180deg) skewY(105deg);     
+}
+li:nth-child(14) {
+    -webkit-transform: rotate(195deg) skewY(105deg);
+    -ms-transform: rotate(195deg) skewY(105deg);
+    transform: rotate(195deg) skewY(105deg);    
+}
+li:nth-child(15) {
+    -webkit-transform: rotate(210deg) skewY(105deg);
+    -ms-transform: rotate(210deg) skewY(105deg);
+    transform: rotate(210deg) skewY(105deg);    
+}
+li:nth-child(16) {
+    -webkit-transform: rotate(225deg) skewY(105deg);
+    -ms-transform: rotate(225deg) skewY(105deg);
+    transform: rotate(225deg) skewY(105deg)
+    deg);    
+}
+li:nth-child(17) {
+    -webkit-transform: rotate(240deg) skewY(105deg);
+    -ms-transform: rotate(240deg) skewY(105deg);
+    transform: rotate(240deg) skewY(105deg);    
+}
+li:nth-child(18) {
+    -webkit-transform: rotate(255deg) skewY(105deg);
+    -ms-transform: rotate(255deg) skewY(105deg);
+    transform: rotate(255deg) skewY(105deg);    
+}
+li:nth-child(19) {
+    -webkit-transform: rotate(270deg) skewY(105deg);
+    -ms-transform: rotate(270deg) skewY(105deg);
+    transform: rotate(270deg) skewY(105deg);    
+}
+li:nth-child(20) {
+    -webkit-transform: rotate(285deg) skewY(105deg);
+    -ms-transform: rotate(285deg) skewY(105deg);
+    transform: rotate(285deg) skewY(105deg);    
+}
+li:nth-child(21) {
+    -webkit-transform: rotate(300deg) skewY(105deg);
+    -ms-transform: rotate(300deg) skewY(105deg);
+    transform: rotate(300deg) skewY(105deg);    
+}
+li:nth-child(22) {
+    -webkit-transform: rotate(315deg) skewY(105deg);
+    -ms-transform: rotate(315deg) skewY(105deg);
+    transform: rotate(315deg) skewY(105deg);    
+}
+li:nth-child(23) {
+    -webkit-transform: rotate(330deg) skewY(105deg);
+    -ms-transform: rotate(330deg) skewY(105deg);
+    transform: rotate(330deg) skewY(105deg);    
+}
+li:nth-child(24) {
+    -webkit-transform: rotate(345deg) skewY(105deg);
+    -ms-transform: rotate(345deg) skewY(105deg);
+    transform: rotate(345deg) skewY(105deg);    
+}
+
+li:first-child .text {
+    background: green; 
+}
+li:nth-child(2) .text {
+    background: tomato; 
+}
+li:nth-child(3) .text {
+    background: aqua; 
+}
+li:nth-child(4) .text {
+    background: yellow;  
+}
+li:nth-child(5) .text {
+    background: orange;  
+}
+li:nth-child(6) .text {
+    background: purple;  
+}
+li:nth-child(7) .text {
+    background: cyan;  
+}
+li:nth-child(8) .text {
+    background: brown;  
+}
+li:nth-child(9) .text {
+    background: gray;  
+}
+li:nth-child(10) .text {
+    background: pink;  
+}
+li:nth-child(11) .text {
+    background: maroon;  
+}
+li:nth-child(12) .text {
+    background: gold;  
+}
+li:nth-child(13) .text {
+    background: tomato; 
+}
+li:nth-child(14) .text {
+    background: aqua; 
+}
+li:nth-child(15) .text {
+    background: yellow;  
+}
+li:nth-child(16) .text {
+    background: orange;  
+}
+li:nth-child(17) .text {
+    background: purple;  
+}
+li:nth-child(18) .text {
+    background: cyan;  
+}
+li:nth-child(19) .text {
+    background: brown;  
+}
+li:nth-child(20) .text {
+    background: gray;  
+}
+li:nth-child(21) .text {
+    background: pink;  
+}
+li:nth-child(22) .text {
+    background: maroon;  
+}
+li:nth-child(23) .text {
+    background: gold;  
+}
+li:nth-child(24) .text {
+    background: red;  
+}
+
